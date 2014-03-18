@@ -1,3 +1,4 @@
 [submodule "openstack"]
 	path = modules/openstack
 	url = git://git.openstack.org/stackforge/puppet-openstack
+    ignore = dirty
