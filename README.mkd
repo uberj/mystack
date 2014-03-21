@@ -1,7 +1,6 @@
 Needed to...
 ------------
 yum install http://repos.fedorapeople.org/repos/openstack/openstack-havana/rdo-release-havana-6.noarch.rpm
-yum install http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
 ^ This might have actually broken something...
 
 Create keystone env script
@@ -40,3 +39,5 @@ Booting an image:
     ```
     2014-03-17 17:40:39.138 31112 WARNING nova.scheduler.driver [req-73845512-376b-4e6b-a443-700502d9fb89 4ed0a00a26234c95af4a3c78969249f2 cae539a959934faabb09b3109038a65a] [instance: 4946e8bb-ca38-42d8-aec8-254186330bc9] Setting instance to ERROR state.
     ```
+
+```nova boot --flavor flavorType --key_name keypairName --image ID newInstanceName```
