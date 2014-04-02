@@ -10,11 +10,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provider "virtualbox" do |v|
     v.memory = 1024 * 3
     v.cpus = 2
+    v.gui = true
   end
 
   # config.vm.box_url = "https://github.com/2creatives/vagrant-centos/releases/download/v6.5.1/centos65-x86_64-20131205.box"
 
   config.vm.network :forwarded_port, guest: 80, host: 8081
+  config.vm.network :forwarded_port, guest: 55672, host: 55672
 
   config.vm.network :private_network, ip: "10.0.0.2"  # Private Network
   config.vm.network :private_network, ip: "10.0.1.2"  # VM Network
